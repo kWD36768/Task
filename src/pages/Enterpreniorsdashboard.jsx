@@ -9,6 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import Chat from '../commoncomponents/Chat';
 const Enterpreniorsdashboard = () => {
    const barData = [
   { name: "Jan", funding: 4000 },
@@ -21,7 +22,7 @@ const Enterpreniorsdashboard = () => {
   return (
 <>
 <div
-      className="min-h-screen px-6 py-8 bg-cover bg-center text-black"
+      className="min-h-screen w-[985px] px-6 py-8 bg-cover bg-center text-black"
       style={{ backgroundImage: "url('/bg.jpg')" }}
     >
       {/* Filters */}
@@ -133,6 +134,7 @@ const Enterpreniorsdashboard = () => {
           Explore More Investors
         </button>
       </div>
+      <Chat/>
     </div>
 </>
   )

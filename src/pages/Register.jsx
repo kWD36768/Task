@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import image1 from '../assets/images/login.jpeg'; 
+import image1 from '../assets/r.webp'; 
 
 const Register = () => {
 
@@ -44,11 +44,11 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-200 flex items-center justify-center px-4">
-      <div className="bg-white w-full max-w-5xl shadow-xl rounded-lg overflow-hidden flex flex-col md:flex-row">
+    <div className="min-h-screen bg-[#595467] flex items-center justify-center px-4">
+      <div className="bg-[#F4F4F4] w-full max-w-5xl shadow-xl rounded-lg overflow-hidden flex items-center flex-col md:flex-row">
         {/* Left (Form Section) */}
         <div className="w-full md:w-1/2 p-6 md:p-12">
-          <h1 className="text-[#7736FF] text-3xl font-bold mb-6">Registration Form</h1>
+          <h1 className=" text-3xl font-bold mb-6">Registration Form</h1>
 
           <form onSubmit={handleSubmit}>
             <input
@@ -57,7 +57,7 @@ const Register = () => {
               placeholder="Name"
             value={formData.name}
               onChange={(e)=> setFormData({...formData , name : e.target.value})}
-              className="border-b-2 border-[#7736FF] w-full rounded p-2 mt-2"
+              className="border-b-2 border-[#364153] w-full rounded p-2 mt-2"
               required
             />
             <input
@@ -66,7 +66,7 @@ const Register = () => {
               placeholder="Email address"
              value = {formData.email}
               onChange= {(e)=> setFormData({...formData , email : e.target.value })}
-              className="border-b-2 border-[#7736FF] w-full rounded p-2 mt-3"
+              className="border-b-2 border-[#364153] w-full rounded p-2 mt-3"
               required
             />
             <input
@@ -75,15 +75,15 @@ const Register = () => {
               placeholder="Phone"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="border-b-2 border-[#7736FF] w-full rounded p-2 mt-3"
+              className="border-b-2 border-[#364153] w-full rounded p-2 mt-3"
               required
             />
             <input
               type="password"
                name="password"
                value={formData.password}
-               onChange={(e)=> setFormData({...formData , password : e.target.password})}
-               className="border-b-2 border-[#7736FF] w-full rounded p-2 mt-3"
+               onChange={(e)=> setFormData({...formData , password : e.target.value})}
+               className="border-b-2 border-[#364153] w-full rounded p-2 mt-3"
               required
             />
 
@@ -92,21 +92,21 @@ const Register = () => {
                 <input
                   type="radio"
                   name="role"
-                  value="investor"
-                  checked={formData.role === "investor"}
+                  value="invester"
+                  checked={formData.role === "invester"}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                 />{" "}
-                Investor
+                invester
               </label>
               <label>
                 <input
                   type="radio"
                   name="role"
-                  value="entrepreneur"
-                  checked={formData.role === "entrepreneur"}
+                  value="enterprenior"
+                  checked={formData.role === "enterprenior"}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                 />{" "}
-                Entrepreneur
+                Enterpreneur
               </label>
             </div>
 
@@ -127,7 +127,7 @@ const Register = () => {
 
             <button
               type="submit"
-              className="bg-[#7736FF] text-white font-semibold py-2 px-6 rounded mt-6 hover:bg-[#5c2fcc] transition"
+              className="bg-[] text-white font-semibold py-2 px-6 rounded mt-6 h bg-[#4785A9] transition"
             >
               Create Account
             </button>
@@ -135,15 +135,15 @@ const Register = () => {
 
           <div className="mt-4 text-sm">
             Already have an account?{" "}
-            <Link to="/" className="text-[#7736FF] hover:underline">
+            <Link to="/" className="text-[#0173F8] hover:underline">
               Sign in
             </Link>
           </div>
         </div>
 
         {/* Right (Image Section) */}
-        <div className="w-full md:w-1/2 hidden md:block">
-          {/* <img src={image1} alt="img" className="w-full h-full object-cover" /> */}
+        <div className=" hidden md:block">
+          <img src={image1} alt="img" className=" object-cover" />
         </div>
       </div>
     </div>

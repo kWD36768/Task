@@ -16,10 +16,10 @@ const routes = createBrowserRouter(
     <Route path='/' element={<Login/>}/>
     <Route path='/register' element={<Register/>}/>
    <Route path='/dashboard' element={<Layout/>}>
-    <Route path='investerdashboard' element={<Investorsdashboard/>}/>
-    <Route path='investrorsprofile' element={<Investrorsprofile/>}/>
-    <Route path='enterpreniorsdashboard' element={<Enterpreniorsdashboard/>}/>
-    <Route path='enterpreniorsprofile' element={<Enterprniorsprofile/>}/>
+    <Route path='invester' element={<Investorsdashboard/>}/>
+    <Route path='invester/profile/:id' element={<Investrorsprofile/>}/>
+    <Route path='enterprenior' element={<Enterpreniorsdashboard/>}/>
+    <Route path='enterprenior/profile/:id' element={<Enterprniorsprofile/>}/>
     </Route>
     </>
   )

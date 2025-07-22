@@ -10,25 +10,25 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault();
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const matchedUser = users.find(
-      (user) => user.email === email && user.password === password
-    );
-    
-    if (matchedUser) {
-      alert("Login successful!");
-      localStorage.setItem("loggedInUser", JSON.stringify(matchedUser));
-      if (matchedUser.role === "investor") {
-        navigate("/dashboard/investerdashboard");
-      } else if (matchedUser.role === "entrepreneur") {
-        navigate("/dashboard/enterpreniorsdashboar");
-      }
-    } else {
-      alert("Invalid email or password.");
-    }
-  };
-
+      e.preventDefault();
+       const users =  JSON.parse(localStorage.getItem("users")) || [];
+       const matchedUser = users.find((user) => user.email === email && user.password === password);
+      
+if ( matchedUser){
+  alert('Loggin Successfully');
+  localStorage.setItem("loggedinUser", JSON.stringify(matchedUser));
+  if(matchedUser.role  === "invester"){
+  navigate('/dashboard/invester')
+  
+}
+ else if (matchedUser.role ==="enterprenior"){
+    navigate('/dashboard/enterprenior')
+   }
+}
+else {
+  alert("invalid email or password")
+}
+  }
   const handleForgotPassword = (e) => {
     e.preventDefault();
     const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -46,9 +46,7 @@ const Login = () => {
       <div className="bg-[#F4F4F4] w-full max-w-5xl shadow-xl rounded-lg overflow-hidden flex items-center  flex-col md:flex-row">
         {/* Left section */}
         <div className="w-full md:w-1/2 p-6 md:p-12">
-          <div className="mb-4">
-            {/* <img src={image1} alt="logo" className="w-8" /> */}
-          </div>
+          
           <h2 className="text-2xl font-bold">
             {showForgotPassword ? "Forgot Password" : "Welcome Back"}
           </h2>
@@ -71,13 +69,13 @@ const Login = () => {
               />
               <button
                 type="submit"
-                className="bg-[#7736FF] w-full py-2 text-white font-semibold border-none rounded hover:bg-[#5e29d8] transition"
+                className=" bg-[#364153] w-full py-2 text-white font-semibold border-none rounded "
               >
                 Recover Password
               </button>
               <p
                 onClick={() => setShowForgotPassword(false)}
-                className="mt-4 text-sm text-[#7736FF] cursor-pointer hover:underline text-center"
+                className="mt-4 text-sm  cursor-pointer hover:underline text-center"
               >
                 Back to Login
               </p>
@@ -147,4 +145,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login 
