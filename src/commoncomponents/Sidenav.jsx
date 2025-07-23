@@ -39,7 +39,7 @@ const Sidenav = () => {
             ifnav ? "block" : "hidden"
           } `}
         >
-          <div className="sidenavinner shadow-md h-[430px] leading-15 border border-black  bg-[#16041575] m-auto rounded-sm p-2">
+          <div className="sidenavinner shadow-md h-[530px] leading-15 border border-black  bg-[#16041575] m-auto rounded-sm p-2">
             <Link to={`/dashboard/${user.role}/profile/${user.id}`}>
               <div className="text-white flex  items-center w-[100px]">
                 {" "}
@@ -86,7 +86,7 @@ const Sidenav = () => {
               <p className="ml-3">Feedback</p>
             </div>
 
-            <div className="text-white flex items-center ml-6 justify-center mt-3 w-[130px]">
+            <div className="text-white flex items-center ml-6 justify-center mt-[150px] w-[130px]">
               <p>
                 <FaFacebookF size={15} />
               </p>
