@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo1 from '../assets/logo.png';
+
 import { IoIosContact } from "react-icons/io";
 import { AiOutlineProfile } from "react-icons/ai";
 import { CiLogout } from "react-icons/ci";
@@ -30,7 +30,7 @@ const Header = () => {
    <div className='Header'>
     <div className='headerinner   rounded-sm  w-[1180px] p-5 flex justify-between items-center bg-[#16041575] m-auto'>
       <div className='logo rounded-sm w-[100px]'>
-        <img src={logo1} alt='img' className='rounded-sm' />
+        <img src="/logo.png" alt='img' className='rounded-sm' />
       </div>
       <div className='relative '>
          <div className='text-white' onClick={()=> setlogo(!logo)}>
